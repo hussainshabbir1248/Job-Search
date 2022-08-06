@@ -1,3 +1,8 @@
-const fruits = ["apple", "banna"];
-const veg = ["Potato", "Radish"];
-console.log([...fruits, ...veg]);
+export const evenOrOdd = (num) => {
+  if (num % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+};
+export const multiply = (number1, number2) => number1 * number2;
