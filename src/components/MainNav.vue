@@ -16,13 +16,29 @@
           {{ listName }}
         </li>
       </ul>
+      <div class="ml-auto flex h-full items-center">
+        <action-button
+          v-if="!isLoggedIn"
+          class="bg-brand-blue-1 text-white py-2 px-4 shadow-2xl hover:shadow-blue"
+          text="Sign In"
+          data-test="login-button"
+          @click="loggedIn"
+        />
+        <user-image v-else data-test="user-profile" />
+      </div>
     </div>
   </header>
 </template>
 
 <script>
+import ActionButton from "@/components/ActionButton.vue";
+import UserImage from "@/components/UserImage.vue";
 export default {
   name: "MainNav",
+  components: {
+    ActionButton,
+    UserImage,
+  },
   data() {
     return {
       company: "Hussy Careers",
@@ -34,7 +50,13 @@ export default {
         "Students",
         "Jobs",
       ],
+      isLoggedIn: false,
     };
+  },
+  methods: {
+    loggedIn() {
+      this.isLoggedIn = true;
+    },
   },
 };
 </script>

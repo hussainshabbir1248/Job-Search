@@ -12,6 +12,9 @@ module.exports = {
         "brand-green-1": "#137333",
         "brand-blue-1": "#1967d2",
       },
+      boxShadow: {
+        blue: "0 0 3px 3px #4385f4",
+      },
     },
   },
   plugins: [
