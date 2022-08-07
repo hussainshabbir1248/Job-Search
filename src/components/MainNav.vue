@@ -5,9 +5,6 @@
     >
       <div class="w-full flex h-full px-8 items-center">
         <a class="text-xl" href="/">{{ company }}</a>
-        <h2 class="ml-8">
-          Developed by: {{ author.firstName }} {{ author.lastName }}
-        </h2>
       </div>
     </div>
   </header>
@@ -18,11 +15,7 @@ export default {
   name: "MainNav",
   data() {
     return {
-      company: "Hussy Career",
-      author: {
-        firstName: "Hussain",
-        lastName: "Shabbir",
-      },
+      company: "Hussy Careers",
     };
   },
 };
